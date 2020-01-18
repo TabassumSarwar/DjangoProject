@@ -1,0 +1,517 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+{% load static %}
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<title>Software Testing Quiz</title>
+   <link href="{% static 'startbootstrap-freelancer-gh-pages/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Theme CSS -->
+  <link href="{% static 'startbootstrap-freelancer-gh-pages/css/freelancer.min.css' %}" rel="stylesheet">
+
+
+</head>
+
+<body>
+<section class="page-section bg-primary text-white mb-0" id="about">
+	<div id="page-wrap">
+
+		<h1> Quiz on Program Testing</h1>
+
+            <ol>
+
+                <li>
+
+                    <h3><i>Boundary value analysis belongs to?</i></h3>
+
+                    <div>
+                        <input type="radio" name="question-1-answers" id="question-1-answers-A" value="A" />
+                        <label for="question-1-answers-A">A) White Box Testing </label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="question-1-answers" id="question-1-answers-B" value="B" />
+                        <label for="question-1-answers-B">B) Black Box Testing </label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="question-1-answers" id="question-1-answers-C" value="C" />
+                        <label for="question-1-answers-C">C) White Box & Black Box Testing</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="question-1-answers" id="question-1-answers-D" value="D" />
+                        <label for="question-1-answers-D">D) None of the mentioned</label>
+                    </div>
+                    <div>
+                        <input type="button" name ="first" value ="check" onclick="first()"/>
+                    </div>
+                </li>
+
+                <li>
+
+                    <h3><i>Which of the following term describes testing?</i></h3>
+
+                    <div>
+                        <input type="radio" name="question-2-answers" id="question-2-answers-A" value="A" />
+                        <label for="question-2-answers-A">A) Finding broken code</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="question-2-answers" id="question-2-answers-B" value="B" />
+                        <label for="question-2-answers-B">B) Evaluating deliverable to find errors </label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="question-2-answers" id="question-2-answers-C" value="C" />
+                        <label for="question-2-answers-C">C) A stage of all projects</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="question-2-answers" id="question-2-answers-D" value="D" />
+                        <label for="question-2-answers-D">D) None of the mentioned</label>
+                    </div>
+                    <div>
+                        <input type="button" name ="second" value ="check" onclick="second()"/>
+                    </div>
+
+                </li>
+
+                <li>
+
+                    <h3><i>Equivalence partitioning is:</i></h3>
+
+                    <div>
+                        <input type="radio" name="question-3-answers" id="question-3-answers-A" value="A" />
+                        <label for="question-3-answers-A">A) a black box testing technique used only by developers</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="question-3-answers" id="question-3-answers-B" value="B" />
+                        <label for="question-3-answers-B">B) a white box testing technique appropriate for component testing</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="question-3-answers" id="question-3-answers-C" value="C" />
+                        <label for="question-3-answers-C">C) a black box testing technique appropriate to all level of testing</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="question-3-answers" id="question-3-answers-D" value="D" />
+                        <label for="question-3-answers-D">D) a black box testing technique that can be used during testing</label>
+                    </div>
+                    <div>
+                        <input type="button" name ="third" value ="check" onclick="third()"/>
+                    </div>
+
+                </li>
+
+                <li>
+
+                    <h3><i>While using black-box testing techniques, we drive a set of test cases that satisfy which of the following criteria.<br />
+					i) test cases that reduce, by a count that is greater than one.<br />
+                    ii) test cases that tell us something about the presence or absence of classes of errors.<br />
+                    iii) execute all loops at their boundaries and within their operational bounds.
+                    </i></h3>
+
+                    <div>
+                        <input type="radio" name="question-4-answers" id="question-4-answers-A" value="A" />
+                        <label for="question-4-answers-A">A)i and ii</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="question-4-answers" id="question-4-answers-B" value="B" />
+                        <label for="question-4-answers-B">B) ii and iii</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="question-4-answers" id="question-4-answers-C" value="C" />
+                        <label for="question-4-answers-C">C)i and iii </label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="question-4-answers" id="question-4-answers-D" value="D" />
+                        <label for="question-4-answers-D">D)All i, ii and iii </label>
+                    </div>
+                    <div>
+                        <input type="button" name ="fourth" value ="check" onclick="fourth()"/>
+                    </div>
+
+                </li>
+
+                <li>
+
+                    <h3><i> ……………… is black-box testing method that divides the input domain of a program into classes of data from which test cases can be derived.</i></h3>
+
+                    <div>
+                        <input type="radio" name="question-5-answers" id="question-5-answers-A" value="A" />
+                        <label for="question-5-answers-A">A)Condition testing</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="question-5-answers" id="question-5-answers-B" value="B" />
+                        <label for="question-5-answers-B">B)  Graph-based testing</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="question-5-answers" id="question-5-answers-C" value="C" />
+                        <label for="question-5-answers-C">C) Equivalence partitioning</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="question-5-answers" id="question-5-answers-D" value="D" />
+                        <label for="question-5-answers-D">D) loop testing</label>
+                    </div>
+                    <div>
+                        <input type="button" name ="fifth" value ="check" onclick="fifth()"/>
+                    </div>
+                </li>
+				<li>
+
+                    <h3>Boundary value analysis is a test design technique that complements …………………..</h3>
+
+                    <div>
+                        <input type="radio" name="question-6-answers" id="question-6-answers-A" value="A" />
+                        <label for="question-6-answers-A">A) Condition testing </label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="question-6-answers" id="question-6-answers-B" value="B" />
+                        <label for="question-6-answers-B">B)Graph-based testing </label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="question-6-answers" id="question-6-answers-C" value="C" />
+                        <label for="question-6-answers-C">C) Equivalence partitioning</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="question-6-answers" id="question-6-answers-D" value="D" />
+                        <label for="question-6-answers-D">D)loop testing </label>
+                    </div>
+                    <div>
+                        <input type="button" name ="sixth" value ="check" onclick="sixth()"/>
+                    </div>
+                </li>
+				<li>
+
+                    <h3>…………………divides the input domain into classes of data that are likely to exercise specificare  software function </h3>
+
+                    <div>
+                        <input type="radio" name="question-7-answers" id="question-7-answers-A" value="A" />
+                        <label for="question-7-answers-A">A)Boundary value analysis </label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="question-7-answers" id="question-7-answers-B" value="B" />
+                        <label for="question-7-answers-B">B)Graph-based testing </label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="question-7-answers" id="question-7-answers-C" value="C" />
+                        <label for="question-7-answers-C">C) Equivalence partitioning</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="question-7-answers" id="question-7-answers-D" value="D" />
+                        <label for="question-7-answers-D">D)loop testing</label>
+                    </div>
+                    <div>
+                        <input type="button" name ="seventh" value ="check" onclick="seventh()"/>
+                    </div>
+                </li>
+				<li>
+
+                    <h3>……………………. probes the programs ability to handle data at the limits of acceptability.</h3>
+
+                    <div>
+                        <input type="radio" name="question-8-answers" id="question-8-answers-A" value="A" />
+                        <label for="question-8-answers-A">A) Condition testing </label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="question-8-answers" id="question-8-answers-B" value="B" />
+                        <label for="question-8-answers-B">B)Graph-based testing </label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="question-8-answers" id="question-8-answers-C" value="C" />
+                        <label for="question-8-answers-C">C) Equivalence partitioning</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="question-8-answers" id="question-8-answers-D" value="D" />
+                        <label for="question-8-answers-D">D)loop testing </label>
+                    </div>
+                    <div>
+                        <input type="button" name ="eighth" value ="check" onclick="eighth()"/>
+                    </div>
+                </li>
+				<li>
+
+                    <h3>………………… can be used to define various classes and input and associated interactions.</h3>
+
+                    <div>
+                        <input type="radio" name="question-9-answers" id="question-9-answers-A" value="A" />
+                        <label for="question-9-answers-A">A) equivalence partitioning and graph based testing </label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="question-9-answers" id="question-9-answers-B" value="B" />
+                        <label for="question-9-answers-B">B)equivalence partitioning and boundary value analysis</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="question-9-answers" id="question-9-answers-C" value="C" />
+                        <label for="question-9-answers-C">C) condition testing and equivalence partitioning</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="question-9-answers" id="question-9-answers-D" value="D" />
+                        <label for="question-9-answers-D">D)graph based testing and boundary value analysis </label>
+                    </div>
+                    <div>
+                        <input type="button" name ="ninth" value ="check" onclick="ninth()"/>
+                    </div>
+                </li>
+				<li>
+
+                    <h3>For retail shopping software which table would be example of decision table?</h3>
+
+                    <div>
+                        <input type="radio" name="question-10-answers" id="question-10-answers-A" value="A" />
+                        <label for="question-10-answers-A">A) A table containing rules of discount  </label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="question-10-answers" id="question-10-answers-B" value="B" />
+                        <label for="question-10-answers-B">B)A table containing rules for interfaces between components</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="question-10-answers" id="question-10-answers-C" value="C" />
+                        <label for="question-10-answers-C">C) A table containing rule of employee behaviour</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="question-10-answers" id="question-10-answers-D" value="D" />
+                        <label for="question-10-answers-D">D)A table containing rules for combination of input </label>
+                    </div>
+                    <div>
+                        <input type="button" name ="tenth" value ="check" onclick="tenth()"/>
+                    </div>
+                </li>
+
+				</ol>
+
+	</div>
+</section>
+	<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	function first()
+	{
+	    if (document.getElementById('question-1-answers-A').checked) {
+            var one = document.getElementById('question-1-answers-A').value;
+        }
+        else if (document.getElementById('question-1-answers-B').checked) {
+            var one = document.getElementById('question-1-answers-B').value;
+        }
+        else  if (document.getElementById('question-1-answers-C').checked) {
+            var one = document.getElementById('question-1-answers-C').value;
+        }
+        else  if (document.getElementById('question-1-answers-D').checked) {
+            var one = document.getElementById('question-1-answers-D').value;
+        }
+	    if (one=='B')
+	        alert("Correct Answer");
+	    else
+	        alert("Wrong Answer");
+	}
+	function second()
+	{
+	    if (document.getElementById('question-2-answers-A').checked) {
+            var two = document.getElementById('question-1-answers-A').value;
+        }
+        else if (document.getElementById('question-2-answers-B').checked) {
+            var two = document.getElementById('question-1-answers-B').value;
+        }
+        else  if (document.getElementById('question-2-answers-C').checked) {
+            var two = document.getElementById('question-1-answers-C').value;
+        }
+        else  if (document.getElementById('question-2-answers-D').checked) {
+            var two = document.getElementById('question-1-answers-D').value;
+        }
+	    if (two=='B')
+	        alert("Correct Answer");
+	    else
+	        alert("Wrong Answer");
+	}
+	function third()
+	{
+	    if (document.getElementById('question-3-answers-A').checked) {
+            var third = document.getElementById('question-1-answers-A').value;
+        }
+        else if (document.getElementById('question-3-answers-B').checked) {
+            var third = document.getElementById('question-1-answers-B').value;
+        }
+        else  if (document.getElementById('question-3-answers-C').checked) {
+            var third = document.getElementById('question-1-answers-C').value;
+        }
+        else  if (document.getElementById('question-3-answers-D').checked) {
+            var third = document.getElementById('question-1-answers-D').value;
+        }
+	    if (third=='D')
+	        alert("Correct Answer");
+	    else
+	        alert("Wrong Answer");
+	}
+	function fourth()
+	{
+	    if (document.getElementById('question-4-answers-A').checked) {
+            var fourth = document.getElementById('question-1-answers-A').value;
+        }
+        else if (document.getElementById('question-4-answers-B').checked) {
+            var fourth = document.getElementById('question-1-answers-B').value;
+        }
+        else  if (document.getElementById('question-4-answers-C').checked) {
+            var fourth = document.getElementById('question-1-answers-C').value;
+        }
+        else  if (document.getElementById('question-4-answers-D').checked) {
+            var fourth = document.getElementById('question-1-answers-D').value;
+        }
+	    if (fourth=='A')
+	        alert("Correct Answer");
+	    else
+	        alert("Wrong Answer");
+	}
+	function fifth()
+	{
+	    if (document.getElementById('question-5-answers-A').checked) {
+            var six = document.getElementById('question-5-answers-A').value;
+        }
+        else if (document.getElementById('question-5-answers-B').checked) {
+            var six = document.getElementById('question-5-answers-B').value;
+        }
+        else  if (document.getElementById('question-5-answers-C').checked) {
+            var six = document.getElementById('question-5-answers-C').value;
+        }
+        else  if (document.getElementById('question-5-answers-D').checked) {
+            var six = document.getElementById('question-5-answers-D').value;
+        }
+	    if (six=='B')
+	        alert("Correct Answer");
+	    else
+	        alert("Wrong Answer");
+	}
+	function sixth()
+	{
+	    if (document.getElementById('question-6-answers-A').checked) {
+            var one6 = document.getElementById('question-6-answers-A').value;
+        }
+        else if (document.getElementById('question-6-answers-B').checked) {
+            var one6 = document.getElementById('question-6-answers-B').value;
+        }
+        else  if (document.getElementById('question-6-answers-C').checked) {
+            var one6 = document.getElementById('question-6-answers-C').value;
+        }
+        else  if (document.getElementById('question-6-answers-D').checked) {
+            var one6 = document.getElementById('question-6-answers-D').value;
+        }
+	    if (one6=='C')
+	        alert("Correct Answer");
+	    else
+	        alert("Wrong Answer");
+	}
+	function seventh()
+	{
+	    if (document.getElementById('question-7-answers-A').checked) {
+            var one7 = document.getElementById('question-7-answers-A').value;
+        }
+        else if (document.getElementById('question-7-answers-B').checked) {
+            var one7 = document.getElementById('question-7-answers-B').value;
+        }
+        else  if (document.getElementById('question-7-answers-C').checked) {
+            var one7 = document.getElementById('question-7-answers-C').value;
+        }
+        else  if (document.getElementById('question-7-answers-D').checked) {
+            var one7 = document.getElementById('question-7-answers-D').value;
+        }
+	    if (one7=='B')
+	        alert("Correct Answer");
+	    else
+	        alert("Wrong Answer");
+	}
+	function eighth()
+	{
+	    if (document.getElementById('question-8-answers-A').checked) {
+            var one8 = document.getElementById('question-8-answers-A').value;
+        }
+        else if (document.getElementById('question-8-answers-B').checked) {
+            var one8 = document.getElementById('question-8-answers-B').value;
+        }
+        else  if (document.getElementById('question-8-answers-C').checked) {
+            var one8 = document.getElementById('question-8-answers-C').value;
+        }
+        else  if (document.getElementById('question-8-answers-D').checked) {
+            var one8 = document.getElementById('question-8-answers-D').value;
+        }
+	    if (one8=='B')
+	        alert("Correct Answer");
+	    else
+	        alert("Wrong Answer");
+	}
+	function ninth()
+	{
+	    if (document.getElementById('question-9-answers-A').checked) {
+            var one9 = document.getElementById('question-9-answers-A').value;
+        }
+        else if (document.getElementById('question-9-answers-B').checked) {
+            var one9 = document.getElementById('question-9-answers-B').value;
+        }
+        else  if (document.getElementById('question-9-answers-C').checked) {
+            var one9 = document.getElementById('question-9-answers-C').value;
+        }
+        else  if (document.getElementById('question-9-answers-D').checked) {
+            var one0 = document.getElementById('question-9-answers-D').value;
+        }
+	    if (one9=='B')
+	        alert("Correct Answer");
+	    else
+	        alert("Wrong Answer");
+	}
+	function tenth()
+	{
+	    if (document.getElementById('question-10-answers-A').checked) {
+            var one10 = document.getElementById('question-10-answers-A').value;
+        }
+        else if (document.getElementById('question-10-answers-B').checked) {
+            var one10 = document.getElementById('question-10-answers-B').value;
+        }
+        else  if (document.getElementById('question-10-answers-C').checked) {
+            var one10 = document.getElementById('question-10-answers-C').value;
+        }
+        else  if (document.getElementById('question-10-answers-D').checked) {
+            var one10 = document.getElementById('question-10-answers-D').value;
+        }
+	    if (one10=='A')
+	        alert("Correct Answer");
+	    else
+	        alert("Wrong Answer");
+	}
+
+
+
+	</script>
+	<script type="text/javascript">
+	var pageTracker = _gat._getTracker("UA-68528-29");
+	pageTracker._initData();
+	pageTracker._trackPageview();
+	</script>
+
+</body>
+
+</html>

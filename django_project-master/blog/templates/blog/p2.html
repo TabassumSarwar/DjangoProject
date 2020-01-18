@@ -1,0 +1,53 @@
+{% extends 'blog\home.html' %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+ {% block begin %}
+<div class="container" style="border:2px solid green;border-radius: 25px;background-color:white">
+      <p>Design, develop, code and run the program in any suitable language to solve the commission problem.<br>
+          Analyze it from the perspective of boundary value testing, derive different test cases,
+          execute these test cases and discuss the test results.<br>
+          Assumption price for lock=45.0, stock=30.0 and barrels=25.0 production limit could sell in a month 70 locks,80 stocks and 90 barrels
+            commission on <br> </br>sales = 10 % <= 1000 and 15 % on 1000 to 1800 and 20 % on above 1800
+      </p>
+<form  method = 'POST' id="sys" action="/p2out/">
+            {% csrf_token %}
+            {% if res1 %}
+           <div class="container">
+            <table class="table table-hover" id="table1">
+                 <tr>
+                    <th>Locks</th>
+                    <th>Stocks</th>
+                    <th>Barrels</th>
+                    <th>Expected sales</th>
+                    <th>Expected commission</th>
+                    <th>Sales</th>
+                    <th>Commission</th>
+                    <th>STATUS</th>
+                 </tr>
+                {% for c in res1 %}
+                    <tr>
+                        {% for i in c %}
+                                <td>{{i}}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+                </table>
+           </div>
+            {% else %}
+             <div class="btn" style="display:flex;justify-content:flex-end;align-items:center; ">
+             <button class="btn btn-primary" type="submit" form="sys" name="run" value="p2" id = "button1" style="float:right">execute</button>
+             </div>
+            {% endif %}
+       </form>
+  </div>
+{% endblock %}
+<script src="https://code.jquery.com/jquery-git.js">
+$(document).ready(function(){
+  $('#button1').click(function(){
+    $("#table1 tr:first").remove();
+  });
+});
+</script>

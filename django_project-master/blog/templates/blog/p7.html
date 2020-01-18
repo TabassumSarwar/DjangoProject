@@ -1,0 +1,52 @@
+{% extends 'blog\home.html' %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+ {% block begin %}
+<div class="container" style="border:2px solid green;border-radius: 25px;background-color:white">
+      <p>Design and develop a program in a language of your choice to solve the
+Triangle problem defined as follows:<br>
+          Accept three integers which are supposed to be the three sides of a triangle and determine if the three values represent an equilateral triangle,
+          isosceles triangle, scalene triangle, or they do not form a triangle at all.<br>
+          Derive test cases for your program based on decision-table approach, execute the test cases and discuss the results.
+      </p>
+<form  method = 'POST' id="sys" action="/even/">
+            {% csrf_token %}
+            {% if res1 %}
+           <div class="container">
+            <table class="table table-hover" id="table1">
+                 <tr>
+                    <th>Input a</th>
+                    <th>Input b</th>
+                    <th>Input c</th>
+                    <th>EXPECTED OUTPUT</th>
+                    <th>Output</th>
+                    <th>STATUS</th>
+                 </tr>
+                {% for c in res1 %}
+                    <tr>
+                        {% for i in c %}
+                                <td>{{i}}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+                </table>
+           </div>
+            {% else %}
+             <div class="btn" style="display:flex;justify-content:flex-end;align-items:center; ">
+             <button class="btn btn-primary" type="submit" form="sys" name="run2" value="p7" id = "button1" style="float:right">execute</button>
+             </div>
+            {% endif %}
+       </form>
+  </div>
+{% endblock %}
+<script src="https://code.jquery.com/jquery-git.js">
+$(document).ready(function(){
+  $('#button1').click(function(){
+    $("#table1 tr:first").remove();
+  });
+});
+</script>
+<h1>7</h1>
